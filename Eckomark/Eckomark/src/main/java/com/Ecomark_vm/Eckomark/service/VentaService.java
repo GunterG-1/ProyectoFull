@@ -71,12 +71,7 @@ public class VentaService {
             .append(" = $").append(d.getPrecioUnitario().multiply(BigDecimal.valueOf(d.getCantidad())))
             .append("\n");
         }
-        SimpleMailMessage mensaje new SimpleMailMessege();
-        mensaje.setTo(venta.getEmail());
-        mensaje.setSubject("Factura electronica - Venta "+ venta.getId());
-        mensaje.setText(cuerpo.toString());
-
-        mailSender.send(mensaje);
+       System.out.println(cuerpo.toString());
 
     }
 
